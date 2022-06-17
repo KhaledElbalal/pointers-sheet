@@ -38,4 +38,14 @@ int main()
         }
         cout << '\n';
     }
+    // Deleting 3D Array
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            delete [] arr[i][j];
+        }
+        delete[] arr[i];
+    }
+    delete [] arr;
 }

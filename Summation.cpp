@@ -22,6 +22,7 @@ int main()
     using std::cout, std::cin;
     int size;
     cin >> size;
+    // Create first matrix and read it
     int **m = new int *[size];
     for (int i = 0; i < size; i++)
     {
@@ -34,6 +35,7 @@ int main()
             cin >> m[i][j];
         }
     }
+    // Create 2D matrix and read it
     int **n = new int *[size];
     for (int i = 0; i < size; i++)
     {
@@ -46,6 +48,7 @@ int main()
             cin >> n[i][j];
         }
     }
+    // Get new array and print it
     int **finalMat = sumMat(m, n, size);
     for (int i = 0; i < size; i++)
     {
@@ -55,4 +58,14 @@ int main()
         }
         cout << '\n';
     }
+    // Delete arrays
+    for (int i = 0; i < size; i++)
+    {
+        delete[] finalMat[i];
+        delete[] m[i];
+        delete[] n[i];
+    }
+    delete[] finalMat;
+    delete[] m;
+    delete[] n;
 }
