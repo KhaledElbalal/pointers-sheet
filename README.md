@@ -1,5 +1,3 @@
----
-
 ### Q1: Create a 3D Array (2013 Final)
 
 **Details:**
